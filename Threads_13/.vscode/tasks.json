@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "taskName": "build",
+            "type": "shell",
+            "command": "c++ -g -std=c++11 -lpthread threads.cpp -o threads.exe",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        },
+
+        {
+            "taskName": "make",
+            "type": "shell",
+            "command": "make",
+            "problemMatcher": "$gcc"
+        },
+
+        {
+            "taskName": "assembly",
+            "type": "shell",
+            "command": "make assembler",
+            "problemMatcher": "$gcc"
+        }
+    ]
+}
